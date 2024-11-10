@@ -27,7 +27,7 @@ console.log(resultSmitOne); // true-РАБОТАЕТ КАК НАДО
 let resultSmitTwo = smit.some((item, index, arraer) => {
    item.name === 'Оля'
 })
-console.log(resultSmitTwo); //false - ДОЛЖНО БЫТЬ TRUE, НО ИЗ-ЗА КВАДРАТНЫХ СКОБОК ВЫДАЁТ FALSE
+console.log(resultSmitTwo); //false - ДОЛЖНО БЫТЬ TRUE, НО ИЗ-ЗА СКОБОК ВЫДАЁТ FALSE
 
 let resultSmitThree = smit.some((item, index, arraer) => 
    item.name === 'Оля'
