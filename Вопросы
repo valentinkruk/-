@@ -1,0 +1,37 @@
+'Use strict'
+
+let smit = [
+   {
+      name: 'Вася',
+      age: 30,
+      city: 'Минск',
+   },
+   {
+      name: 'Коля',
+      age: 20,
+      city: 'Брест',
+   },
+   {
+      name: 'Оля',
+      age: 70,
+      city: 'Гомель',
+   },
+];
+
+
+let resultSmitOne = smit.some((item, index, arraer) => {
+   return item.name === 'Оля'
+})
+console.log(resultSmitOne); // true-РАБОТАЕТ КАК НАДО
+
+let resultSmitTwo = smit.some((item, index, arraer) => {
+   item.name === 'Оля'
+})
+console.log(resultSmitTwo); //false - ДОЛЖНО БЫТЬ TRUE, НО ИЗ-ЗА КВАДРАТНЫХ СКОБОК ВЫДАЁТ FALSE
+
+let resultSmitThree = smit.some((item, index, arraer) => 
+   item.name === 'Оля'
+)
+console.log(resultSmitThree); // true, РАБОТАЕТ НОРМ, Т.К. УБРАЛ СКОБКИ {}
+
+ВОПРОС: ПОЧЕМУ ПРИ ИСПОЛЬЗОВАНИИ СКОБОК {} БЕЗ RETURN НЕ РАБОТАЕТ КОД
